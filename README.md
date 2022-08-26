@@ -1,3 +1,3 @@
 # ducks_and_bets
 
-whats up party people
+This is a read me file
