@@ -1,0 +1,8 @@
+name: ducks_and_bets
+dependencies:
+  - python==3.8.5
+  - pip
+  - pip:
+    - pygame==2.0.1
+
+# conda env create --file .\environment.yml
