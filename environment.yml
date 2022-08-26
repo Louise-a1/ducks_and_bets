@@ -3,6 +3,6 @@ dependencies:
   - python==3.8.5
   - pip
   - pip:
-    - pygame==2.0.1
+    - pygame==2.1.2
 
 # conda env create --file .\environment.yml

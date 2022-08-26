@@ -17,6 +17,8 @@ class Duck:
         self.walkCount = 0
         self.standing = False
         self.vel = vel
+        self.width = 32 
+        self.height = 32
 
     def __repr__(self):
         return "id: " + str(self.id)
