@@ -11,6 +11,7 @@ dimg_left = pygame.image.load(Path("art/duck-1/duck_alpha_1_left.png"))
 dimg_right = pygame.image.load(Path("art/duck-1/duck_alpha_1_right.png"))
 dimg_up = pygame.image.load(Path("art/duck-1/duck_alpha_1_up.png"))
 dimg_down = pygame.image.load(Path("art/duck-1/duck_alpha_1_down.png"))
+dimg_standing = pygame.image.load(Path("art/duck-1/duck_alpha_1_standing.png"))
 
 win = pygame.display.set_mode((1920, 1080))
 # win = pygame.display.set_mode((0, 0), pygame.RESIZABLE) # pygame.FULLSCREEN
@@ -19,7 +20,7 @@ pygame.display.set_caption("Walk Simulator")
 
 
 def select_image(direction):
-    if direction == "standing": return dimg_right
+    if direction == "standing": return dimg_standing
     if direction == "left": return dimg_left
     if direction == "right": return dimg_right
     if direction == "up": return dimg_up
