@@ -1,3 +1,5 @@
+import random
+
 class Wallet:
     def __init__(self, id: int):
         self.id = id
@@ -20,6 +22,8 @@ class Duck:
         self.width = 32 
         self.height = 32
         self.location = "home"
+        self.money = 100
+        self.bet_timeout = 200
 
 
     def set_direction(self, direction):
@@ -71,14 +75,14 @@ class Duck:
         # from home to house
         if self.home_to_house():
             self.location = "house"
-            self.x = 100    
-            self.y = 100
+            self.x = 240    
+            self.y = 400
             self.set_direction("up")
             
         if self.house_to_home():
             self.location = "home"
-            self.x = 100
-            self.y = 100
+            self.x = 1187
+            self.y = 650
             self.set_direction("down")
 
 
@@ -87,6 +91,22 @@ class Duck:
         
     def house_to_home(self):
         if self.location == "house" and 250 >= self.x <= 300 and 500 >= self.y >= 450: return True 
+
+
+    def duck_bet(self):
+        if self.money >= 10:
+            self.bet_timeout -= 40
+            if self.bet_timeout <= 0:
+                self.bet_timeout = 200
+                self.money -= 10
+                rand = random.randint(1,10)
+                if rand == 1: 
+                    self.money += 100
+
+                else: 
+                    print("You lost!")
+                
+                print(f'Your new account is {self.money}')
 
 
     def __repr__(self):

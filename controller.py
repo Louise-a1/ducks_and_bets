@@ -37,6 +37,14 @@ def controller():
         else:
             d.set_direction("standing")
 
+        # bet
+        if keys[pygame.K_b]:
+            d.duck_bet()
+
+        # quit
+        if keys[pygame.K_q]:
+            run = False
+
         # check for map changes
         d.set_map()
 
