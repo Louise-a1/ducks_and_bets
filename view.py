@@ -4,7 +4,7 @@ from pathlib import Path
 from Duck import *
 
 home = pygame.image.load(Path("art/maps/map_alpha_12.jpg"))
-house = pygame.image.load(Path("art/maps/map_alpha_2.jpg"))
+house = pygame.image.load(Path("art/maps/map_alpha_21.jpg"))
 
 
 dimg_left = pygame.image.load(Path("art/duck-1/duck_alpha_1_left.png"))
