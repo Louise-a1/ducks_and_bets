@@ -71,14 +71,14 @@ class Duck:
         # from home to house
         if self.home_to_house():
             self.location = "house"
-            self.x = 100    
-            self.y = 100
+            self.x = 32    
+            self.y = 1003
             self.set_direction("up")
             
         if self.house_to_home():
             self.location = "home"
-            self.x = 100
-            self.y = 100
+            self.x = 1100
+            self.y = 535
             self.set_direction("down")
 
 
@@ -86,7 +86,7 @@ class Duck:
         if self.location == "home" and 1065 <= self.x <= 1190 and 368 <= self.y <= 534: return True
         
     def house_to_home(self):
-        if self.location == "house" and 250 >= self.x <= 300 and 500 >= self.y >= 450: return True 
+        if self.location == "house" and 0 <= self.x <= 31 and 777 <= self.y <= 1002: return True 
 
 
     def __repr__(self):
