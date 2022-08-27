@@ -19,6 +19,7 @@ class Duck:
         self.vel = vel
         self.width = 32 
         self.height = 32
+        self.location = "home"
 
 
     def set_direction(self, direction):
@@ -65,6 +66,28 @@ class Duck:
         if self.up == True: return "up"
         if self.down == True: return "down"
         
+
+    def set_map(self):
+        # from home to house
+        if self.home_to_house():
+            self.location = "house"
+            self.x = 250
+            self.y = 440
+            self.set_direction("up")
+
+        if self.house_to_home():
+            self.location = "home"
+            self.x = 170
+            self.y = 310
+            self.set_direction("down")
+
+
+    def home_to_house(self):
+        if self.location == "home" and 158 >= self.x <= 180 and 290 >= self.y >= 245: return True
+
+    def house_to_home(self):
+        if self.location == "house" and 250 >= self.x <= 300 and 500 >= self.y >= 450: return True
+
 
     def __repr__(self):
         return "id: " + str(self.id)

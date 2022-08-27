@@ -37,6 +37,9 @@ def controller():
         else:
             d.set_direction("standing")
 
+        # check for map changes
+        d.set_map()
+
         redraw_view(d)
 
 
